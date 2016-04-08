@@ -1,3 +1,52 @@
+
 body {
-  background-color: blue;
+  width: 1100px;
+  margin: 0;
+}
+
+header {
+  margin-top: 22px;
+}
+
+nav {
+  margin-left: 33px;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+img {
+  width: 1100px;
+  height: 131px;
+}
+
+.answers {
+  text-align: center;
+  margin: 0 auto;
+  background: #EEEEEE;
+}
+
+h1 {
+  color: #4A4A4A;
+}
+
+.answers p {
+  color: #2D2D2D;
+}
+.answer6 p {
+  margin: 0;
+}
+footer {
+  background: #4B484F;
+  height: 117px;
+}
+
+footer p {
+  margin: 0;
+  text-align: center;
+}
+
+.copyright {
+  font-size: 15px;
+  padding-top: 79px;
+  color: #98979C;
 }

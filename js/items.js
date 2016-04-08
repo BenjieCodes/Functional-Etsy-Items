@@ -1,4 +1,3 @@
-console.log('Hello World')
 var items = [{
   "listing_id": 161489961,
   "state": "active",
