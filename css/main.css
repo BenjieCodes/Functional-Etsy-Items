@@ -26,7 +26,12 @@ img {
 }
 
 h1 {
+  font-size: 36px;
   color: #4A4A4A;
+}
+
+.top {
+  margin: 0;
 }
 
 .answers p {
