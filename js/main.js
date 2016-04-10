@@ -28,3 +28,13 @@ var answer1Area = document.querySelector('#answer1');
 
 // Put our answer on the page
 answer1Area.innerHTML = answer1;
+
+// 2. Show me how to get an array of items that cost between $14.00 and $18.00 USD
+
+// Since I already have the var that gives me the price of all the items, I just have to filter the items that fit the questions criteria.
+
+var $14_18 = allPrices.filter (function (fit) {
+  return fit <= 18 && fit >= 14;
+});
+
+// Now that I have filtered, I must return the items with their item description to know which items they are.
