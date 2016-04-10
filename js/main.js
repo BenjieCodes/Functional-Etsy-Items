@@ -41,14 +41,23 @@ var titleItem = $14_18.map(function (price) {
   return price.title;
 });
 
-var answer2 = titleItem;
-
+// Make a var to let DOM work inside HTML ID "answer2".
 var answer2Area = document.querySelector('#answer2');
+answer2Area.innerHTML = titleItem;
 
-answer2Area.innerHTML = answer2;
+// CANT FIGURE OUT HOW TO MAKE LIST THROUGH DOM.
 
 // 3. Which item has a "GBP" currency code? Display it's name and price.
 
 var gbp = items.filter (function (item){
   return item.currency_code === "GBP";
 });
+
+var answer3 = gbp.map(function (gbpcurrency){
+  return gbpcurrency.title
+});
+
+var answer3Area = document.querySelector('#answer3');
+answer3Area.innerHTML = answer3;
+
+// 4. Display a list of all items who are made of wood.
