@@ -32,6 +32,8 @@ img {
 h1 {
   font-size: 36px;
   color: #4A4A4A;
+  padding: 67px;
+
 }
 
 .top {
@@ -42,6 +44,10 @@ h1 {
   color: #2D2D2D;
 }
 .answer6 p {
+  margin: 0;
+}
+
+.bottom {
   margin: 0;
 }
 footer {
