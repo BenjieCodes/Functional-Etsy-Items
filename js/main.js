@@ -18,10 +18,10 @@ var priceSum = allPrices.reduce(function (prev, curr) {
 var avg = priceSum / items.length;
 
 // Let's now round that to 2 decimals
-var final = avg.toFixed(2);
+var final1 = avg.toFixed(2);
 
 // Finally, lets build our answer string
-var answer1 = "The average price is $" + final;
+var answer1 = "The average price is $" + final1;
 
 // Find my "answer" area in the DOM
 var answer1Area = document.querySelector('#answer1');
@@ -31,10 +31,24 @@ answer1Area.innerHTML = answer1;
 
 // 2. Show me how to get an array of items that cost between $14.00 and $18.00 USD
 
-// Since I already have the var that gives me the price of all the items, I just have to filter the items that fit the questions criteria.
-
-var $14_18 = allPrices.filter (function (fit) {
-  return fit <= 18 && fit >= 14;
+// I must first make an array to get the items that are in between those prices
+var $14_18 = items.filter (function (item) {
+  return item.price <= 18 && item.price >= 14;
 });
 
-// Now that I have filtered, I must return the items with their item description to know which items they are.
+// Now make a var that displays the title of the items.
+var titleItem = $14_18.map(function (price) {
+  return price.title;
+});
+
+var answer2 = titleItem;
+
+var answer2Area = document.querySelector('#answer2');
+
+answer2Area.innerHTML = answer2;
+
+// 3. Which item has a "GBP" currency code? Display it's name and price.
+
+var gbp = items.filter (function (item){
+  return item.currency_code === "GBP";
+});
