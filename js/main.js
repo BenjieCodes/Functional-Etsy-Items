@@ -61,3 +61,20 @@ var answer3Area = document.querySelector('#answer3');
 answer3Area.innerHTML = answer3;
 
 // 4. Display a list of all items who are made of wood.
+
+// 5. Which items are made of eight or more materials? Display the name, number of items and the items it is made of.
+
+var eight = items.filter(function (item){
+  if (item.materials.length >= 8) {
+    return item;
+  }
+});
+
+var answer5 = eight.map(function (item){
+  return item.title;
+});
+
+var answer5Area = document.querySelector('#answer5');
+answer5Area.innerHTML = answer5;
+
+// 6. 
