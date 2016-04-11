@@ -79,4 +79,12 @@ answer5Area.innerHTML = answer5;
 
 // 6. How many items were made by their sellers?
 
-var sellers = items.filter ()
+var sellers = items.filter (function (item) {
+  if (item.who_made === "i_did")
+  return item;
+});
+
+var answer6Area = document.querySelector('#answer6');
+var answer6 = ""+ sellers.length+ " items were made by their sellers";
+
+answer6Area.innerHTML = answer6;
