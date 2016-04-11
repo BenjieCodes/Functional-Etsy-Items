@@ -33,7 +33,7 @@ answer1Area.innerHTML = answer1;
 
 // I must first make an array to get the items that are in between those prices
 var $14_18 = items.filter (function (item){
-  return item.price <= 18 && item.price >= 14;
+  return item.price < 18 && item.price > 14;
 });
 
 // Now have the var $14_18 that displays on the page using the DOM

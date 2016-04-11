@@ -15,6 +15,8 @@ nav {
 }
 
 a {
+  font-size: 27px;
+  font-family: 'Open Sans', sans-serif;
   color: #2B2A2F;
   text-decoration: none;
 }
@@ -30,10 +32,16 @@ img {
 }
 
 h1 {
-  font-size: 36px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 34px;
   color: #4A4A4A;
   padding: 30px;
 
+}
+
+.answer {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
 }
 
 #answer {
