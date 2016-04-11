@@ -123,6 +123,8 @@ var answer5 = eight.map(function (item){
 var answer5Area = document.querySelector('#answer5');
 answer5Area.innerHTML = answer5;
 
+
+
 // 6. How many items were made by their sellers?
 
 // Found the number of items that were my by sellers.
