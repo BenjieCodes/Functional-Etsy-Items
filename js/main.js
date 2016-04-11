@@ -3,13 +3,13 @@
 
 // To get a sum of all prices, we first need all prices
 // This `map` will give us an array of all prices
-var allPrices = items.map( function (item) {
+var allPrices = items.map( function (item){
   return item.price;
 });
 
 // Now that I have all the prices, we can `reduce` them down to
 // a single value, which is the sum of all prices
-var priceSum = allPrices.reduce(function (prev, curr) {
+var priceSum = allPrices.reduce(function (prev, curr){
   return prev + curr;
 });
 
@@ -32,12 +32,12 @@ answer1Area.innerHTML = answer1;
 // 2. Show me how to get an array of items that cost between $14.00 and $18.00 USD
 
 // I must first make an array to get the items that are in between those prices
-var $14_18 = items.filter (function (item) {
+var $14_18 = items.filter (function (item){
   return item.price <= 18 && item.price >= 14;
 });
 
 // Now make a var that displays the title of the items.
-var titleItem = $14_18.map(function (price) {
+var titleItem = $14_18.map(function (price){
   return price.title;
 });
 
@@ -65,9 +65,24 @@ answer3Area.innerHTML = answer3;
 
 // 4. Display a list of all items who are made of wood.
 
-var madeOf = items.map.indexOf (function (materials){
-  return materials;
+// Made a variable to show what the materials are made out of for all items
+var material = items.map (function (item){
+  return item.materials;
 });
+
+// Made a command that will show which items are made of the wood
+var wood = material.map (function(madeOf){
+  return madeOf.indexOf ("wood")
+});
+
+//STUCK HERE
+
+var answer4 = wood.map (function (answer){
+  if (wood >= 0) {
+    items.title.push;
+  }
+});
+
 
 // 5. Which items are made of eight or more materials? Display the name, number of items and the items it is made of.
 
@@ -88,7 +103,7 @@ answer5Area.innerHTML = answer5;
 // 6. How many items were made by their sellers?
 
 // Found the number of items that were my by sellers.
-var sellers = items.filter (function (item) {
+var sellers = items.filter (function (item){
   if (item.who_made === "i_did")
   return item;
 });
