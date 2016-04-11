@@ -48,7 +48,7 @@ var para = document.createElement("p");
 para.innerHTML = item.title; + "";
 // Make a command that will add the element p and the title item each time it goes through the id #answer2.
 answer2Area.appendChild(para);
-});;
+});
 
 
 // 3. Which item has a "GBP" currency code? Display it's name and price.
@@ -58,14 +58,14 @@ var gbp = items.filter (function (item){
   return item.currency_code === "GBP";
 });
 
-// After filtering the items, I now made a var that will display the title of the filtered items.
+// After filtering the items, I now made a var that will display the title and answer of the filtered items.
 var answer3 = gbp.map(function (gbpcurrency){
-  return gbpcurrency.title
+  return gbpcurrency.title + " costs £" + gbpcurrency.price;
 });
 
 // This variable displays the item on HTML using the DOM.
 var answer3Area = document.querySelector('#answer3');
-answer3Area.innerHTML = answer3;
+answer3Area.innerHTML = answer3
 
 // 4. Display a list of all items who are made of wood.
 
