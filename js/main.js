@@ -36,16 +36,20 @@ var $14_18 = items.filter (function (item){
   return item.price <= 18 && item.price >= 14;
 });
 
-// Now make a var that displays the title of the items.
-var titleItem = $14_18.map(function (price){
-  return price.title;
-});
+// Now have the var $14_18 that displays on the page using the DOM
+var answer2Area = document.querySelector("#answer2");
 
-// Make a var to let DOM work inside HTML ID "answer2".
-var answer2Area = document.querySelector('#answer2');
-answer2Area.innerHTML = titleItem;
+// Create a loop that will make a paragraph "for each" item
+$14_18.forEach(function (item) {
+// Make a paragraph tag for the answers
+var para = document.createElement("p");
+// Make a variable to put text and answer in.
+// By using innerHTML, the content "item.title" will be displayed on to the document.
+para.innerHTML = item.title; + "";
+// Make a command that will add the element p and the title item each time it goes through the id #answer2.
+answer2Area.appendChild(para);
+});;
 
-// CANT FIGURE OUT HOW TO MAKE LIST THROUGH DOM.
 
 // 3. Which item has a "GBP" currency code? Display it's name and price.
 
@@ -112,3 +116,31 @@ var sellers = items.filter (function (item){
 var answer6Area = document.querySelector('#answer6');
 var answer6 = ""+ sellers.length+ " items were made by their sellers";
 answer6Area.innerHTML = answer6;
+
+
+
+
+
+// //Homework Review
+//
+// //Number 4
+//
+// // 1. Filter down to items made of wood
+// // var woodyItems = items.filter (function (item) {
+// //   return item.materials === "wood"
+// //doesnt work because materials is an array
+//
+// var woodyItems = items.filter (function (item){
+//   return item.materials.indexOf ("wood") >= 0
+// });
+//
+//
+// // 2. Get those on my page, and append "is made of wood"
+//
+// var answer4Area = document.querySelector("#answer4");
+//
+// woodyItems.forEach( function (item) {
+//   var pTag = document.createElement("p");
+//   pTag.innerHTML = item.title + "is made of wood";
+//   answer4Area.appendChild(pTag);
+// });
