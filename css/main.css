@@ -32,19 +32,20 @@ img {
 h1 {
   font-size: 36px;
   color: #4A4A4A;
-  padding: 67px;
+  padding: 30px;
 
+}
+
+#answer {
+  padding: 40px;
 }
 
 .top {
   margin: 0;
 }
 
-.answers p {
-  color: #2D2D2D;
-}
-.answer6 p {
-  margin: 0;
+#answer6 {
+  padding-bottom: 80px;
 }
 
 .bottom {

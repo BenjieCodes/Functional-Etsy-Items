@@ -49,42 +49,51 @@ answer2Area.innerHTML = titleItem;
 
 // 3. Which item has a "GBP" currency code? Display it's name and price.
 
+// Made a variable that will filter all items that have currency code "GBP".
 var gbp = items.filter (function (item){
   return item.currency_code === "GBP";
 });
 
+// After filtering the items, I now made a var that will display the title of the filtered items.
 var answer3 = gbp.map(function (gbpcurrency){
   return gbpcurrency.title
 });
 
+// This variable displays the item on HTML using the DOM.
 var answer3Area = document.querySelector('#answer3');
 answer3Area.innerHTML = answer3;
 
 // 4. Display a list of all items who are made of wood.
 
-// 5. Which items are made of eight or more materials? Display the name, number of items and the items it is made of.
-
-var eight = items.filter(function (item){
-  if (item.materials.length >= 8) {
-    return item;
-  }
+var madeOf = items.map.indexOf (function (materials){
+  return materials;
 });
 
+// 5. Which items are made of eight or more materials? Display the name, number of items and the items it is made of.
+
+// Made a variable that found the length of the object "materials" to filter items that were 8 or more.
+var eight = items.filter(function (item){
+  return item.materials.length >= 8;
+});
+
+// Made a varibale that will show the items filtered with 8 or more materials.
 var answer5 = eight.map(function (item){
   return item.title;
 });
 
+// This variable displays the item on HTML using the DOM.
 var answer5Area = document.querySelector('#answer5');
 answer5Area.innerHTML = answer5;
 
 // 6. How many items were made by their sellers?
 
+// Found the number of items that were my by sellers.
 var sellers = items.filter (function (item) {
   if (item.who_made === "i_did")
   return item;
 });
 
+// This variable displays the item on HTML using the DOM.
 var answer6Area = document.querySelector('#answer6');
 var answer6 = ""+ sellers.length+ " items were made by their sellers";
-
 answer6Area.innerHTML = answer6;
