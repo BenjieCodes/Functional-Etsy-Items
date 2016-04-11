@@ -107,21 +107,49 @@ wood.forEach (function (item){
 
 
 
-// 5. Which items are made of eight or more materials? Display the name, number of items and the items it is made of.
+// // 5. Which items are made of eight or more materials? Display the name, number of items and the items it is made of.
+//
+// // Made a variable that found the length of the object "materials" to filter items that were 8 or more.
+// var eight = items.filter(function (item){
+//   return item.materials.length >= 8;
+// });
+//
+// // Made a varibale that will show the items filtered with 8 or more materials.
+// var answer5 = eight.map(function (item){
+//   return item.title;
+// });
+//
+// // This variable displays the item on HTML using the DOM.
+// var answer5Area = document.querySelector('#answer5');
+// answer5Area.innerHTML = answer5;
+//ABOVE WAS THE OLD CODE THAT I USED BUT FAILED TO ANSWER THE QUESTION
 
-// Made a variable that found the length of the object "materials" to filter items that were 8 or more.
-var eight = items.filter(function (item){
+// Filter out the items that are made of eight or more materials
+var eightMaterials = items.filter (function (item) {
   return item.materials.length >= 8;
 });
 
-// Made a varibale that will show the items filtered with 8 or more materials.
-var answer5 = eight.map(function (item){
-  return item.title;
-});
+// Display the items that were filtered as well as the number of materials and what the materials are
+// Target the ID using the DOM
+var answer5Area = document.querySelector("#answer5");
+// make a loop that will display the item's title, number of materials, and material list
+eightMaterials.forEach (function (material){
+  //Make a paragraph tag for the title
+  var para = document.createElement("p");
+  para.innerHTML = material.title + " is made up of " + material.materials.length + " materials";
+  answer5Area.appendChild(para);
 
-// This variable displays the item on HTML using the DOM.
-var answer5Area = document.querySelector('#answer5');
-answer5Area.innerHTML = answer5;
+  //Make a ul tag and an li tag for the list of materials
+  var ulTag = document.createElement("ul");
+
+  material.materials.forEach (function (item){
+    var liTag = document.createElement("li");
+    liTag.innerHTML = item;
+    ulTag.appendChild(liTag);
+  });
+
+  answer5Area.appendChild(ulTag);
+});
 
 
 
