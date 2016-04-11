@@ -69,23 +69,42 @@ answer3Area.innerHTML = answer3
 
 // 4. Display a list of all items who are made of wood.
 
-// Made a variable to show what the materials are made out of for all items
-var material = items.map (function (item){
-  return item.materials;
+// // Made a variable to show what the materials are made out of for all items
+// var material = items.map (function (item){
+//   return item.materials;
+// });
+//
+// // Made a command that will show which items are made of the wood
+// var wood = material.map (function(madeOf){
+//   return madeOf.indexOf ("wood")
+// });
+//
+// //STUCK HERE
+//
+// var answer4 = wood.map (function (answer){
+//   if (wood >= 0) {
+//     items.title.push;
+//   }
+// });
+//ABOVE WAS THE OLD CODE THAT I USED BUT FAILED TO ANSWER THE QUESTION
+
+// Filter out the items that are made of wood
+var wood = items.filter (function (item) {
+  return item.materials.indexOf("wood") >= 0;
 });
 
-// Made a command that will show which items are made of the wood
-var wood = material.map (function(madeOf){
-  return madeOf.indexOf ("wood")
+// Display the filtered items onto the page by listing with createElement and adding content with a forEach and appendChild.
+// Create a variable so that the DOM can be used on the ID #answer4.
+var answer4Area = document.querySelector("#answer4")
+// Make a loop so that for each item on the array wood, there will be a paragraph tag and content inside.
+wood.forEach (function (item){
+  // Make a paragraph tag
+  var para = document.createElement("p");
+  // The innerHTML will display the answer by adding the items title and also a string that states it's made of wood.
+  para.innerHTML = item.title + " is made of wood";
+  answer4Area.appendChild(para);
 });
 
-//STUCK HERE
-
-var answer4 = wood.map (function (answer){
-  if (wood >= 0) {
-    items.title.push;
-  }
-});
 
 
 // 5. Which items are made of eight or more materials? Display the name, number of items and the items it is made of.
